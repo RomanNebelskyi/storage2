@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<table>
+  <th >id</th>
+  <th>price</th>
+  <th>quantity</th>
+  <th>item</th>
+  <th:block th:each="orders : ${orders}">
+    <tr>
+      <td th:text="${orders.id}"></td>
+      <td th:text="${orders.price}"></td>
+      <td th:text="${orders.quantity}"></td>
+      <td th:text="${orders.item}"></td>
+    </tr>
+
+  </th:block>
+</table>
+</body>
+</html>
